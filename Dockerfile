@@ -6,7 +6,6 @@ WORKDIR /app
 
 # Copy package.json and bun.lockb
 COPY package.json ./
-COPY bun.lockb ./
 
 # Install dependencies
 RUN bun install --frozen-lockfile
@@ -33,7 +32,6 @@ WORKDIR /app
 COPY --from=build /app/.output ./.output
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./package.json
-COPY --from=build /app/bun.lockb ./bun.lockb
 
 # Expose the port the app runs on
 EXPOSE 3000

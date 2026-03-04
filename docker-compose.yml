@@ -6,10 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3110"
-    volumes:
-      - .:/app
-      - /app/node_modules
+      - "3110:3110"
     env_file:
       - .env
     environment:
