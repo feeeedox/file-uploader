@@ -9,5 +9,3 @@ services:
       - "3110:3110"
     env_file:
       - .env
-    environment:
-      - DATABASE_URL=mariadb://user:password@db:3306/database

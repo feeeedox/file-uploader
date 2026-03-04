@@ -34,11 +34,11 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./package.json
 
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 3110
 
 # Set environment variables
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
+ENV NUXT_PORT=3110
 
 # Start the application
 CMD ["bun", ".output/server/index.mjs"]
